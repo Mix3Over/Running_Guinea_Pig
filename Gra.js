@@ -33,7 +33,7 @@ var checkDead = setInterval(function(){
     var vblock = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
 
     if(vblock<400 && vblock>200 && vcharacter>=500){
-        block.style.animation = "none";
+        block.classList.remove('animacjaBloku');
         //block.style.display = "none";
         alert(pkt);
     }
