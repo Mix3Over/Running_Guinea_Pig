@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+}
+
+#game{
+    position: absolute;
+    width: 1500px;
+    height: 700px;
+}
+
+#count{
+    position: absolute;
+    font-size: 165px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    right: 30px;
+    top: 40px;
+}
+
+#character{
+    width: 200px;
+    height: 280px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 520px;
+    left: 300px;
+    z-index: -1;
+}
+#character-image{
+    background: url('Nikolas.png') no-repeat center center;
+    background-size: 300px;
+    width: 180px;
+    height: 300px;
+}
+
+.Podskok{
+    animation: jump 650ms;
+}
+@keyframes jump{
+    0%{top:520px;}
+    50%{top:300px;}
+    100%{top:520px;}
+}
+
+#block{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 420px;
+    left: 1400px;
+    z-index: 1;
+}
+
+#block-image{
+    background: url('Carrot.png') no-repeat center center;
+    background-size: 100px;
+    width: 100px;
+    height: 120px;
+}
+
+.animacjaBloku{
+    animation: blockMove 2s linear infinite;
+}
+@keyframes blockMove{
+    
+    0%{left:1400px;}
+    100%{left:-200px;}
+}
+
+#background{
+    position: absolute;
+    width: 1500px;
+    height: 700px;
+}
+
+#grass{
+    background: url('Grass.png') no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    margin-top: 360px;
+    z-index: 0;
+}    
+
+#color{
+    position: absolute;
+    width: 1500px;
+    height: 800px;
+    background-color: rgb(221, 238, 238);
+    z-index: -5;
+    margin-top: 50px;
+}
+
+#barrier{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 210px;
+    height: 800px;
+    top: 55px;
+    left: 0;
+    z-index: 100;
+}
